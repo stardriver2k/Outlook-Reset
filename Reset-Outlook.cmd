@@ -1,12 +1,12 @@
-:: Zurücksetzen von Outlook-Profilen ab Version 2003
+:: ZurÃ¼cksetzen von Outlook-Profilen ab Version 2003
 :: Autor: Alexander Karls, pegasus GmbH, Stand 01.10.18
 
 @echo off
 
-echo Vorhandene Outlook-Profile werden geloescht. Bitte mit erhöhten Rechten starten, falls notwendig!
+echo Vorhandene Outlook-Profile werden geloescht. Bitte mit erhÃ¶hten Rechten starten, falls notwendig!
 pause
 
-:: Default Profiles löschen 
+:: Default Profiles lÃ¶schen 
 :: Office 2003
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook" /v "DefaultProfile" /f
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Profiles" /v "DefaultProfile" /f
@@ -40,7 +40,7 @@ reg delete "HKEY_USERS\S-1-5-21-219420007-2090875171-1169685880-5631\Software\Mi
 reg delete "HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles" /f
 reg delete "HKEY_USERS\S-1-5-21-219420007-2090875171-1169685880-5631\Software\Microsoft\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles" /f
 
-:: Outlook-Einstellungen zurücksetzen
+:: Outlook-Einstellungen zurÃ¼cksetzen
 :CheckOS
 IF EXIST "%PROGRAMFILES(X86)%" (GOTO 64BIT) ELSE (GOTO 32BIT)
 
